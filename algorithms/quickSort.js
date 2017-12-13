@@ -18,10 +18,10 @@ const swap = function(items, firstIndex, secondIndex) {
 
 /* 
 The partition function is where most of the work is done in the algorithm. think of the "i" and "j" variables as pointers.
-The pointers will compare items in the array to the partition variable to make sure items on the left side are less than the partition and,
- items on the right side are greater than the partition. when the left pointer passes the right pointer the partition stops,
-and returns the i variable. this will be used as the pivot point for the next partition. This method of partitioning does not create
-any additional arrays.
+The pointers will compare items in the array to the partition variable to make sure items on the left side are less than 
+the partition and,items on the right side are greater than the partition. when the left pointer passes the right pointer 
+the partition stops, and returns the i variable. this will be used as the pivot point for the next partition. 
+This method of partitioning does not create any additional arrays.
 */
 
 const partition = function(items, left, right) {
@@ -46,10 +46,12 @@ const partition = function(items, left, right) {
 }
 
 /* 
-the main qucick sort function calls itself recursively. the first if statement is to make sure the function isnt given an array of 0 or 1 items.
-the left and right options are given default values if the user doesn't provide them. index if given the value returned from the partition function. this also starts
-the partitioning and the sort. this will return a number to be used as the ihndex. if the left is less than the returned index than additional sorting needs to be done, 
-and quick sort is then called recursiveluy to further partition the array. the same is true if the right value is greater than the returned index. the aray is then returned sorted.
+the main qucick sort function calls itself recursively. the first if statement is to make sure the function 
+isnt given an array of 0 or 1 items.the left and right options are given default values if the user doesn't 
+provide them. index if given the value returned from the partition function. this also starts the partitioning,
+and the sort. this will return a number to be used as the index. if the left is less than the returned index than
+additional sorting needs to be done,  quick sort is then called recursiveluy to further partition the array. 
+the same is true if the right value is greater than the returned index. the aray is then returned sorted.
 */
 
 const quickSort = function(items, left, right) {
